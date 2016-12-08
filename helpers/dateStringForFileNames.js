@@ -1,7 +1,16 @@
 "use strict";
 
 let currentDay = new Date(),
-    dateString;
-dateString = '' + currentDay.getFullYear() + (currentDay.getMonth()+ 1) + currentDay.getDate().length === 1 ? '0':'' + currentDay.getDate();
+    dateString,
+    year,
+    month,
+    date;
+
+year = currentDay.getFullYear();
+month = currentDay.getMonth() + 1;
+date = currentDay.getDate();
+date = date < 10 ? '0' : '';
+date += currentDay.getDate();
+dateString = ''+year+month+date;
 
 module.exports = dateString;

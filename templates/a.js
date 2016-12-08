@@ -14,10 +14,14 @@ var pow = require('../helpers/printOrWrite')(),
 var logics = require('./logics');
 
 
-// logic goes here!
+function run(inp){
+    var out;
 
+    return out;
+}
 
-// logic ends here
+out = run(inp);
+
 
 pow(out, function(err){
     if (err) console.log(err);

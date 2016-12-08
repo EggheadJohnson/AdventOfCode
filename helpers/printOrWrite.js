@@ -3,9 +3,10 @@ let dateString = require('./dateStringForFileNames'),
     fs = require('fs');
 
 // console.log(process.argv);
-function powMaker(outputOption){
+function powMaker(outputOption, folder){
     if (outputOption === 'write'){
-        return fs.writeFileSync.bind(this, dateString+'/out');
+        folder = folder || dateString;
+        return fs.writeFileSync.bind(this, folder+'/out');
     }
     else {
         return (function(str, cb){

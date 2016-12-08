@@ -10,14 +10,18 @@ var fs = require('fs');
 // var inp = fs.readFileSync('inp.txt', {encoding: 'utf8'}).split('\n');
 // //
 var out;
-var pow = require('../helpers/printOrWrite')();
+var pow = require('../helpers/printOrWrite')(),
+var logics = require('./logics');
 
 
-// logic goes here!
-console.log(inp);
-out = inp;
+function run(inp){
+    var out;
 
-// logic ends here
+    return out;
+}
+
+out = run(inp);
+
 
 pow(out, function(err){
     if (err) console.log(err);
