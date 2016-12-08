@@ -1,0 +1,15 @@
+{
+  "name": "advent-of-code",
+  "version": "0.0.1",
+  "description": "My solutions to the Advent of Code challenges: adventofcode.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "minimist": "^1.2.0"
+  }
+}
