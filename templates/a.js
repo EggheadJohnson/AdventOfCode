@@ -11,7 +11,7 @@ var fs = require('fs');
 // //
 var out;
 var pow = require('../helpers/printOrWrite')(),
-var logics = require('./logics');
+    logics = require('./logics');
 
 
 function run(inp){
