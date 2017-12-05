@@ -14,13 +14,16 @@ var options = minimist(process.argv.slice(2), knownOptions);
 
 gulp.task('new-day', () => {
 
-    // if (process.argv.length > 3) folderName = process.argv[3];
-    // console.log(process.argv);
-    folderName = options.date || dateString;
-    // folderName = process.argv[3] || dateString;
-    // console.log(folderName);
-    //
+    let date = new Date();
+
+    let year = date.getFullYear();
+    let day = date.getDate()+1;
+
+    day = day < 10 ? '0'+day : ''+day;
+
+    folderName = options.date || day;
+
     console.log("creating new day: "+folderName);
     gulp.src('./templates/*')
-        .pipe(gulp.dest('./2017/'+folderName));
+        .pipe(gulp.dest(`./${year}/`+folderName));
 })
