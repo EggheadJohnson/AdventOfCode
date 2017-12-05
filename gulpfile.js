@@ -16,11 +16,11 @@ gulp.task('new-day', () => {
 
     // if (process.argv.length > 3) folderName = process.argv[3];
     // console.log(process.argv);
-    folderName = options.date;
+    folderName = options.date || dateString;
     // folderName = process.argv[3] || dateString;
     // console.log(folderName);
     //
     console.log("creating new day: "+folderName);
     gulp.src('./templates/*')
-        .pipe(gulp.dest('./'+folderName));
+        .pipe(gulp.dest('./2017/'+folderName));
 })

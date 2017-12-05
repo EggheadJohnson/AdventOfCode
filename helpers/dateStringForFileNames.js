@@ -10,7 +10,9 @@ year = currentDay.getFullYear();
 month = currentDay.getMonth() + 1;
 date = currentDay.getDate();
 date = date < 10 ? '0' : '';
-date += currentDay.getDate();
+date += currentDay.getDate()+1;
 dateString = ''+year+month+date;
 
-module.exports = dateString;
+console.log("HI I WAS CALLED");
+
+module.exports = date;
