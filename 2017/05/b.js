@@ -1,3 +1,4 @@
+'use strict';
 /*
 
 template b
@@ -7,17 +8,31 @@ template b
 var fs = require('fs');
 // // choose just one of the read options
 // var inp = require('./a.in.js');
-// var inp = fs.readFileSync('inp.txt', {encoding: 'utf8'}).split('\n');
+var inp = fs.readFileSync('./05/inp.txt', {encoding: 'utf8'}).split('\n').map(n => Number(n));
+
+inp = inp.slice(0, inp.length-1);
 // //
 var out;
-var pow = require('../helpers/printOrWrite')(),
+var pow = require('../../helpers/printOrWrite')(),
     logics = require('./logics');
 
 
 function run(inp){
     var out;
+    let x = 0;
+    let steps = 0;
+    while (x >= 0 && x < inp.length) {
 
-    return out;
+      // console.log({inp, x});
+      let t = inp[x];
+      if (t >= 3) inp[x]--;
+      else inp[x]++;
+
+      x += t;
+      steps++;
+    }
+
+    return steps;
 }
 
 out = run(inp);
