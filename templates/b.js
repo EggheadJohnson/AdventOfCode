@@ -1,21 +1,22 @@
+'use strict';
 /*
 
 template b
 
 */
 
-var fs = require('fs');
+let fs = require('fs');
 // // choose just one of the read options
-// var inp = require('./a.in.js');
-// var inp = fs.readFileSync('inp.txt', {encoding: 'utf8'}).split('\n');
+// let inp = require('./a.in.js');
+// let inp = fs.readFileSync('inp.txt', {encoding: 'utf8'}).split('\n');
 // //
-var out;
-var pow = require('../helpers/printOrWrite')(),
+let out;
+let pow = require('../../helpers/printOrWrite')(),
     logics = require('./logics');
 
 
 function run(inp){
-    var out;
+    let out;
 
     return out;
 }
