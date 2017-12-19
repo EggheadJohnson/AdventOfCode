@@ -13,6 +13,4 @@ date = date < 10 ? '0' : '';
 date += currentDay.getDate()+1;
 dateString = ''+year+month+date;
 
-console.log("HI I WAS CALLED");
-
 module.exports = date;

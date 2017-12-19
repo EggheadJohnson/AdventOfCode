@@ -2,6 +2,8 @@
 let dateString = require('./dateStringForFileNames'),
     fs = require('fs');
 
+const util = require('util');
+
 // console.log(process.argv);
 function powMaker(outputOption, folder){
     if (outputOption === 'write'){
@@ -10,7 +12,7 @@ function powMaker(outputOption, folder){
     }
     else {
         return (function(str, cb){
-            console.log(str);
+            console.log(util.inspect(str, {depth: null}));
             cb();
         });
     }
