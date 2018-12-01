@@ -95,5 +95,5 @@ for line in inpt:
             targets['bot'][line[-1]] = Bot()
         targets['bot'][line[-1]].accept(int(line[1]))
 
-for i in ['74', '144', '21']:
-    targets['bot'][i].print_me()
+for i in ['0', '1', '2']:
+    targets['output'][i].print_me()
